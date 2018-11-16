@@ -1,0 +1,5 @@
+FROM openjdk:8-jre-alpine
+MAINTAINER skidd@peakey.com
+EXPOSE 7680 
+COPY ./files/config-server.jar /app.jar
+CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/app.jar"]
